@@ -1,0 +1,33 @@
+@mixin animation-fade-in-down($duration: 1s, $from: -10px, $to: 0px, $delay: 0s, $name: fade-in-down) {
+    animation-name: $name;
+    animation-duration: $duration;
+    animation-timing-function: ease;
+    animation-delay: $delay;
+    
+    @keyframes #{$name} {
+      from {
+        opacity: 0;
+        transform: translateY($from);
+      }
+      to {
+        opacity: 1;
+        transform: translateY($to);
+      }
+    }
+  }
+  @mixin buttonHoverAnimation {
+    transition: all 0.3s ease;
+
+    &:hover {
+        background-color: darken($color-button, 10%);
+        transform: translateY(-3px);
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    &:active {
+        transform: translateY(1px);
+        box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.2);
+    }
+}
+
+  

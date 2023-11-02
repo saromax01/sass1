@@ -1,0 +1,58 @@
+@import "./partials/reset";
+@import "./partials/colors";
+@import "./partials/fonts";
+@import "./partials/spacing";
+@import "./partials/mixins";
+@import "./partials/buttons";
+@import "./partials/animations";
+
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 16px;
+  background-color: $color-nav;
+  font-family: $font-family-default;
+
+  a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: $color-text;
+  }
+  img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.hero {
+  @include animation-fade-in-down();
+
+  @include title-big();
+  background-color: $color-bg-hero;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: black;
+
+  .hero-image {
+    @include floating(10px, 0px 6px 12px rgba(0, 0, 0, 0.2), 2px solid #eee);
+    width: 200px;
+  }
+
+  button {
+    @include buttonHoverAnimation;
+  }
+}
+
+.grid-images {
+  @include grid(4);
+
+  .image img {
+    @include floating(5px, 0px 4px 8px rgba(0, 0, 0, 0.15));
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+}

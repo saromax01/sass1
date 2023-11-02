@@ -1,0 +1,30 @@
+$sizes: (
+  sm: 8px,
+  normal: 16px,
+  md: 24px,
+  lg: 32px,
+  xl: 48px,
+  xxl: 64px
+);
+
+@each $name, $size in $sizes {
+  .padding-block-#{$name} {
+    padding-top: $size;
+    padding-bottom: $size;
+  }
+
+  .padding-inline-#{$name} {
+    padding-left: $size;
+    padding-right: $size;
+  }
+
+  .margin-block-#{$name} {
+    margin-top: $size;
+    margin-bottom: $size;
+  }
+
+  .margin-inline-#{$name} {
+    margin-left: $size;
+    margin-right: $size;
+  }
+}

@@ -1,0 +1,12 @@
+$button-colors: (
+  primary: $color-button,
+  secondary: $color-unknown1,
+  tertiary: $color-unknown2,
+  viola: purple,
+);
+
+@each $name, $color in $button-colors {
+  .btn-#{$name} {
+    @include button-styles($color);
+  }
+}

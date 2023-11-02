@@ -1,0 +1,23 @@
+@mixin floating($radius: 5px, $shadow: 0px 4px 10px rgba(0, 0, 0, 0.2), $border: none) {
+  border-radius: $radius;
+  box-shadow: $shadow;
+  border: $border;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+@mixin grid($items-per-line: 4) {
+  display: flex;
+  flex-wrap: wrap;
+  > * {
+    flex: 1 0 calc(100% / #{$items-per-line} - 16px);
+    margin: 8px;
+  }
+}
+@mixin button-styles($color: black) {
+  @include floating(10px, 0px 6px 12px rgba(0, 0, 0, 0.2), 2px solid #eee);
+  padding: 10px;
+
+  background-color: $color;
+}
