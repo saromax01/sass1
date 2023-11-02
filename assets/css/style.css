@@ -317,10 +317,7 @@ nav img {
 }
 
 .hero {
-  animation-name: fade-in-down;
-  animation-duration: 1s;
-  animation-timing-function: ease;
-  animation-delay: 0s;
+  animation: fade-in-down 1s 0s;
   font-family: "Arial", sans-serif;
   font-size: 32px;
   font-weight: bold;
@@ -351,7 +348,7 @@ nav img {
   cursor: pointer;
 }
 .hero button {
-  transition: all 0.3s ease;
+  transition: all 0.3s;
 }
 .hero button:hover {
   background-color: #0055da;
